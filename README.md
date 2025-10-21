@@ -4,7 +4,7 @@
 
 This repo contains execution code and artifacts related to Base contract deployments, upgrades, and calls. It also includes validation tools and a signing interface that helps signers easily perform transaction signing through a user-friendly web interface. For actual contract implementations, see [base-org/contracts](https://github.com/base-org/contracts).
 
-This repo is structured such that each network has a high-level directory which contains subdirectories of any "tasks" (contract deployments/calls) that have happened for that network.
+This repo is structured such that each network has a high-level directory which contains subdirectories of any "tasks" (contract deployments/calls) that have happened in that network.
 
 <!-- Badge row 1 - status -->
 
