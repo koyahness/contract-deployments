@@ -35,11 +35,11 @@ First, install forge if you don't have it already:
 
 To execute a new task, run one of the following commands (depending on the type of changes you're making):
 
-- For incident response commands: `make setup-incident network=<network> incident=<incident-name>`
-- For gas increase commands: `make setup-gas-increase network=<network>`
-- For full new deployment (of L1 contracts related to Base): `make setup-deploy network=<network>`
-- For fault proof upgrade: `make setup-upgrade-fault-proofs network=<network>`
-- For contract calls, upgrades, or one-off contract deployments: `make setup-task network=<network> task=<task-name>`
+- For incident response commands: `make setup-incident network=<network> incident=<incident-name>`.
+- For gas increase commands: `make setup-gas-increase network=<network>`.
+- For full new deployment (of L1 contracts related to Base): `make setup-deploy network=<network>`.
+- For fault proof upgrade: `make setup-upgrade-fault-proofs network=<network>`.
+- For contract calls, upgrades, or one-off contract deployments: `make setup-task network=<network> task=<task-name>`.
 
 Next, `cd` into the directory that was created for you and follow the steps listed below for the relevant template.
 
@@ -50,11 +50,11 @@ Next, `cd` into the directory that was created for you and follow the steps list
 
 Each task will have a directory structure similar to the following:
 
-- **[inputs/](/inputs)** any input JSON files
-- **[records/](/records)** Foundry will autogenerate files here from running commands
-- **[script/](/script)** place to store any one-off Foundry scripts
-- **[src/](/src)** place to store any one-off smart contracts (long-lived contracts should go in [base-org/contracts](https://github.com/base-org/contracts))
-- **.env** place to store environment variables specific to this task
+- **[inputs/](/inputs)** any input JSON files.
+- **[records/](/records)** Foundry will autogenerate files here from running commands.
+- **[script/](/script)** place to store any one-off Foundry scripts.
+- **[src/](/src)** place to store any one-off smart contracts (long-lived contracts should go in [base-org/contracts](https://github.com/base-org/contracts)).
+- **.env** place to store environment variables specific to this task.
 
 > **📝 Note:** Before continuing with the templates below, please review the [setup guide for valid upgrade folders](DEVELOPER.md) to ensure your task is compatible with the new validation tool.
 
