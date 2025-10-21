@@ -33,7 +33,7 @@ First, install forge if you don't have it already:
 
 - Run `make install-foundry` to install [`Foundry`](https://github.com/foundry-rs/foundry/commit/3b1129b5bc43ba22a9bcf4e4323c5a9df0023140).
 
-To execute a new task, run one of the following commands (depending on the type of change you're making):
+To execute a new task, run one of the following commands (depending on the type of changes you're making):
 
 - For incident response commands: `make setup-incident network=<network> incident=<incident-name>`
 - For gas increase commands: `make setup-gas-increase network=<network>`
