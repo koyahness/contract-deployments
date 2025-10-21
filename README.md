@@ -72,48 +72,48 @@ To use the template during an incident:
 To add new incident response scripts:
 
 1. Any incident response-related scripts should be included in this template (should be generic, not specific to network), with specific TODOs wherever addresses or other details need to be filled in.
-1. Add the relevant make commands that would need to be run for the script to the template Makefile
+1. Add the relevant make commands that would need to be run for the script to the template Makefile.
 1. Add relevant mainnet addresses in comments to increase efficiency responding to an incident.
 
 ## Using the deploy template
 
 This template is used for deploying the L1 contracts in the OP stack to set up a new network.
 
-1. Ensure you have followed the instructions above in `setup`
-1. Rename the folder to something more descriptive
+1. Ensure you have followed the instructions above in `setup`.
+1. Rename the folder to something more descriptive.
 1. Specify the commit of [Optimism code](https://github.com/ethereum-optimism/optimism) and [Base contracts code](https://github.com/base-org/contracts) you intend to use in the `.env` file
-1. Run `make deps`
+1. Run `make deps`.
 1. Fill in the `inputs/deploy-config.json` and `inputs/misc-config.json` files with the input variables for the deployment.
 1. See the example `make deploy` command. Modifications may need to be made if you're using a key for deployment that you do not have the private key for (e.g. a hardware wallet)
-1. Run `make deploy` command
+1. Run `make deploy` command.
 1. Check in files to GitHub. The files to ignore should already have been specified in the `.gitignore`, so you should be able to check in everything.
 
 ## Using the gas limit increase template
 
 This template is increasing the throughput on Base Chain.
 
-1. Ensure you have followed the instructions above in `setup`
-1. Go to the folder that was created using the `make setup-gas-increase network=<network>` step
+1. Ensure you have followed the instructions above in `setup`.
+1. Go to the folder that was created using the `make setup-gas-increase network=<network>` step.
 1. Fill in all TODOs (search for "TODO" in the folder) in the `.env` and `README` files. Tip: you can run `make deps` followed by `make sign-upgrade` to produce a Tenderly simulation which will help fill in several of the TODOs in the README (and also `make sign-rollback`).
-1. Check in the task when it's ready to sign and collect signatures from signers
+1. Check in the task when it's ready to sign and collect signatures from signers.
 1. Once executed, check in the records files and mark the task `DONE` in the README.
 
 ## Using the fault proof upgrade template
 
 This template is used to upgrade the fault proof contracts. This is commonly done in conjunction with a hard fork.
 
-1. Ensure you have followed the instructions above in `setup`
-1. Go to the folder that was created using the `make setup-upgrade-fault-proofs network=<network>` step
+1. Ensure you have followed the instructions above in `setup`.
+1. Go to the folder that was created using the `make setup-upgrade-fault-proofs network=<network>` step.
 1. Specify the commit of [Optimism code](https://github.com/ethereum-optimism/optimism) and [Base contracts code](https://github.com/base-org/contracts) you intend to use in the `.env` file
-1. Run `make deps`
+1. Run `make deps`.
 1. Add the new absolute prestate to the `.env` file. This can be found in the op-program prestates [releases.json](https://github.com/ethereum-optimism/superchain-registry/blob/main/validation/standard/standard-prestates.toml) file.
 1. NOTE: If this task is for mainnet, the directory should work as-is. If this task is for testnet, you will need to follow the following steps:
-   1. Update the `UpgradeDGF` script to inherit `MultisigBuilder` instead of `NestedMultisigBuilder`
-   1. Comment out the mainnet environment variables and uncomment the testnet vars in `.env`
-   1. Comment out the nested multisig builder commands in the Makefile and uncomment the multisig builder commands
-1. Build the contracts with `forge build`
-1. Remove the unneeded validations from `VALIDATION.md` and update the relevant validations accordingly
-1. Check in the task when it's ready to sign and collect signatures from signers
+   1. Update the `UpgradeDGF` script to inherit `MultisigBuilder` instead of `NestedMultisigBuilder`.
+   1. Comment out the mainnet environment variables and uncomment the testnet vars in `.env`.
+   1. Comment out the nested multisig builder commands in the Makefile and uncomment the multisig builder commands.
+1. Build the contracts with `forge build`.
+1. Remove the unneeded validations from `VALIDATION.md` and update the relevant validations accordingly.
+1. Check in the task when it's ready to sign and collect signatures from signers.
 1. Once executed, check in the records files and mark the task `DONE` in the README.
 
 ## Using the swap owner template
